@@ -1,6 +1,6 @@
 # Submenu de gestion de dispositivos
 
-def menu_dispositivos(lista_dispositivos):
+def menu_dispositivos_admin(lista_dispositivos):
 
     while True:
         print("\n--- Gestion de Dispositivos ---")
@@ -20,6 +20,25 @@ def menu_dispositivos(lista_dispositivos):
         elif opcion == "4":
             buscar_dispositivo(lista_dispositivos)
         elif opcion == "5":
+            break
+        else:
+            print("La opcion no es valida. Intente nuevamente.")
+
+
+def menu_dispositivos_usuarios(lista_dispositivos):
+
+    while True:
+        print("\n--- Gestion de Dispositivos ---")
+        print("1. Listar dispositivos")
+        print("2. Buscar dispositivo")
+        print("3. volver a menú principal")
+        opcion = input("Seleccione una opcion: ")
+
+        if opcion == "1":
+            listar_dispositivos(lista_dispositivos)
+        elif opcion == "2":
+            buscar_dispositivo(lista_dispositivos)
+        elif opcion == "3":
             break
         else:
             print("La opcion no es valida. Intente nuevamente.")
