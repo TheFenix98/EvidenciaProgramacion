@@ -5,7 +5,7 @@ from dispositivos import menu_dispositivos_admin, menu_dispositivos_usuarios
 
 
 def autenticar_usuario(lista_usuarios):
-    nombre = input("Ingrese su nombre de usuario: ").strip()
+    nombre = input("Ingrese su nombre de usuario: ")
 
     if nombre.lower() == "admin":
         print("Bienvenido administrador.")
@@ -13,7 +13,7 @@ def autenticar_usuario(lista_usuarios):
     else:
         print(f"Usuario '{nombre}' no es administrador.")
         respuesta = input(
-            "¿Desea registrarse como usuario? (s/n): ").strip().lower()
+            "¿Desea registrarse como usuario? (s/n): ").lower()
         if respuesta == "s":
             registrar_usuario(lista_usuarios)
         else:
