@@ -4,6 +4,9 @@ from menu import autenticar_usuario
 from menu import menu_dispositivos
 
 
+from automatizacion import automatizacion
+
+
 def main():
     usuarios = []
     dispositivos = []
@@ -24,6 +27,8 @@ def main():
             break
         else:
             print("La opcion no valida. Intente nuevamente.")
+
+    automatizacion()
 
 
 if __name__ == "__main__":
