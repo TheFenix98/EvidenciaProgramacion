@@ -1,7 +1,8 @@
 # Modulo principal para la logica del programa
 
-from usuarios import menu_usuarios
+from menu import autenticar_usuario
 from menu import menu_dispositivos
+
 
 def main():
     usuarios = []
@@ -15,7 +16,7 @@ def main():
         opcion = input("Seleccione una opcion: ")
 
         if opcion == "1":
-            menu_usuarios(usuarios)
+            autenticar_usuario(usuarios)
         elif opcion == "2":
             menu_dispositivos(dispositivos)
         elif opcion == "3":
@@ -23,6 +24,7 @@ def main():
             break
         else:
             print("La opcion no valida. Intente nuevamente.")
+
 
 if __name__ == "__main__":
     main()
