@@ -1,6 +1,7 @@
 # Aqui dejamos el menu
 
 from usuarios import menu_usuarios, registrar_usuario
+from dispositivos import menu_dispositivos_admin, menu_dispositivos_usuarios
 
 
 def autenticar_usuario(lista_usuarios):
@@ -19,5 +20,11 @@ def autenticar_usuario(lista_usuarios):
             print("Acceso denegado.")
 
 
-def menu_dispositivos(dispositivos):
-    print("Gestion de dispositivos no implementada todavia.")
+def menu_dispositivos_01(dispositivos):
+    nombre = input("ingrese su nombre de usuario: ")
+    if nombre.lower() == "admin":
+        print("acceso al menu de administrador")
+        menu_dispositivos_admin(dispositivos)
+    else:
+        print("accediendo a la gestion de dispositivos")
+        menu_dispositivos_usuarios(dispositivos)
