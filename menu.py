@@ -3,6 +3,10 @@
 from usuarios import menu_usuarios, registrar_usuario
 from dispositivos import menu_dispositivos_admin, menu_dispositivos_usuarios
 
+# esto interpreta que el usuario tiene que tener como nombre "admin",
+# y lo que nosostros queremos es que busque que rol tiene el usuario,
+# y a partir de eso te tire los menus correspondientes a cada rol.
+
 
 def autenticar_usuario(lista_usuarios):
     nombre = input("Ingrese su nombre de usuario: ")
