@@ -2,9 +2,13 @@
 
 from menu import autenticar_usuario
 from menu import menu_dispositivos_01
-
+from log_in import log_in
 
 from automatizacion import automatizacion
+
+print("Bienvenido a la casa intelignete del 'grupo 6'")
+
+log_in()
 
 
 def main():
