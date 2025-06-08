@@ -1,4 +1,5 @@
 # Submenu de gestion de dispositivos
+from automatizacion import verificar_y_apagar
 
 def menu_dispositivos_admin(lista_dispositivos):
 
@@ -14,6 +15,7 @@ def menu_dispositivos_admin(lista_dispositivos):
         if opcion == "1":
             agregar_dispositivo(lista_dispositivos)
         elif opcion == "2":
+            verificar_y_apagar(lista_dispositivos)
             listar_dispositivos(lista_dispositivos)
         elif opcion == "3":
             eliminar_dispositivo(lista_dispositivos)

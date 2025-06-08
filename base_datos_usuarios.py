@@ -1,6 +1,6 @@
 def ususarios_creados():
     usuario_1 = {"usuario": "Benjamin",
-                "clave": "sorrentino1",
+                "clave": "111",
                 "rol": "admin"}
     usuario_2 = {"usuario": "Ezequiel",
                 "clave": "garsa2",
