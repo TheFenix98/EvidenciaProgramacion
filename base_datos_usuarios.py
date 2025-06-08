@@ -1,4 +1,4 @@
-def ususarios_creados():
+def usuarios_creados():
     usuario_1 = {"usuario": "Benjamin",
                 "clave": "111",
                 "rol": "admin"}
