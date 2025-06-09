@@ -2,33 +2,22 @@
 
 from usuarios import menu_usuarios, registrar_usuario
 from dispositivos import menu_dispositivos_admin, menu_dispositivos_usuarios
-
+from log_in import log_in
 # esto interpreta que el usuario tiene que tener como nombre "admin",
 # y lo que nosostros queremos es que busque que rol tiene el usuario,
 # y a partir de eso te tire los menus correspondientes a cada rol.
 
-
-def autenticar_usuario(lista_usuarios):
-    nombre = input("Ingrese su nombre de usuario: ")
-
-    if nombre.lower() == "admin":
-        print("Bienvenido administrador.")
-        menu_usuarios(lista_usuarios)
-    else:
-        print(f"Usuario '{nombre}' no es administrador.")
-        respuesta = input(
-            "¿Desea registrarse como usuario? (s/n): ").lower()
-        if respuesta == "s":
-            registrar_usuario(lista_usuarios)
+def autenticar_rol_usuario(infoUsuario, lista_usuarios, lista_dispositivos, opcion):
+    if opcion == "1":
+        if infoUsuario["rol"] == "admin":
+            menu_usuarios(lista_usuarios)
         else:
-            print("Acceso denegado.")
-
-
-def menu_dispositivos_01(dispositivos):
-    nombre = input("ingrese su nombre de usuario: ")
-    if nombre.lower() == "admin":
-        print("acceso al menu de administrador")
-        menu_dispositivos_admin(dispositivos)
+            print("Acceso denegado: solo los administradores pueden gestionar usuarios.")
+    elif opcion == "2":
+        if infoUsuario["rol"] == "admin":
+            menu_dispositivos_admin(lista_dispositivos)
+        else:
+            menu_dispositivos_usuarios(lista_dispositivos)
     else:
-        print("accediendo a la gestion de dispositivos")
-        menu_dispositivos_usuarios(dispositivos)
+        print("Opción no válida en autenticación.")
+
