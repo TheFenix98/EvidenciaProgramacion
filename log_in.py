@@ -5,7 +5,7 @@ def log_in():
     acceso = "denegado"
     while acceso == "denegado":
         usuario_ingresado = input("ingrese su nombre de usuario: ")
-        contraseña_ingresada = input("ingrese una contraseña: ")
+        contraseña_ingresada = input("ingrese su contraseña: ")
         lista_de_usuarios = usuarios_creados()
         for user in lista_de_usuarios:
             if user["usuario"] == usuario_ingresado and user["clave"] == contraseña_ingresada:
@@ -14,3 +14,4 @@ def log_in():
                 break
         if acceso == "denegado":
             print("usuario y/o contraseña incorrecta, vuelva a intentar")
+    return infoUsuario
