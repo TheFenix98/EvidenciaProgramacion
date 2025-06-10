@@ -5,4 +5,7 @@ def usuarios_creados():
     usuario_2 = {"usuario": "Ezequiel",
                 "clave": "garsa2",
                 "rol": "invitado"}
-    return [usuario_1, usuario_2]
+    usuario_3 = {"usuario": "Gustavo",
+                "clave": "gusta3",
+                "rol": "admin"}
+    return [usuario_1, usuario_2, usuario_3]
